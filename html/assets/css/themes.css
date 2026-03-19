@@ -1,0 +1,118 @@
+/* ===== Dei Multichar - Theme Variables ===== */
+
+:root {
+    --glass-bg: rgba(10, 10, 15, 0.92);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    --glass-blur: blur(20px);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.5);
+    --accent-blue: #3b82f6;
+    --accent-green: #4ade80;
+    --accent-red: #ef4444;
+    --accent-yellow: #fbbf24;
+}
+
+/* ===== Themes ===== */
+body[data-theme="dark"] { /* default */ }
+
+body[data-theme="midnight"] {
+    --glass-bg: rgba(10, 15, 40, 0.92);
+    --glass-border: rgba(100, 130, 255, 0.08);
+    --glass-shadow: 0 8px 32px rgba(0, 10, 40, 0.4);
+    --accent-blue: #6366f1;
+}
+body[data-theme="midnight"] .slot-card.selected {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+body[data-theme="midnight"] .btn-play {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+body[data-theme="neon"] {
+    --glass-bg: rgba(0, 0, 0, 0.92);
+    --glass-border: rgba(0, 255, 136, 0.1);
+    --glass-shadow: 0 0 20px rgba(0, 255, 136, 0.08);
+    --accent-blue: #00ff88;
+}
+body[data-theme="neon"] .slot-card.selected {
+    border-color: rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+}
+body[data-theme="neon"] .btn-play {
+    background: linear-gradient(135deg, #00ff88, #00e5ff);
+    color: #000;
+}
+body[data-theme="neon"] .slot-card:hover {
+    border-color: rgba(0, 255, 136, 0.2);
+}
+body[data-theme="neon"] .char-name {
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+body[data-theme="minimal"] {
+    --glass-bg: rgba(20, 20, 20, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.03);
+    --glass-shadow: none;
+    --glass-blur: blur(10px);
+}
+
+/* ===== Light Mode ===== */
+body.light-mode {
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --text-primary: #1a1a1a;
+    --text-secondary: rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode .overlay {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.light-mode .slot-card {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+body.light-mode .slot-card.empty {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .char-name,
+body.light-mode .info-label,
+body.light-mode .info-value,
+body.light-mode .panel-title {
+    color: var(--text-primary);
+}
+
+body.light-mode .char-job,
+body.light-mode .char-cash,
+body.light-mode .char-date,
+body.light-mode .empty-text {
+    color: var(--text-secondary);
+}
+
+body.light-mode .form-input {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-primary);
+}
+
+body.light-mode .form-input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .confirm-overlay .confirm-box {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .confirm-title,
+body.light-mode .confirm-text {
+    color: #1a1a1a;
+}
+
+body.light-mode .dei-watermark {
+    color: rgba(0, 0, 0, 0.08);
+}

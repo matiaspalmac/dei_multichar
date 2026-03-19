@@ -1,0 +1,16 @@
+Locales["es"] = {
+    ["male"] = "Hombre",
+    ["female"] = "Mujer",
+    ["command_setslots"] = "Establecer numero de slots multicaracter de un jugador",
+    ["command_remslots"] = "Eliminar numero de slots multicaracter de un jugador",
+    ["command_enablechar"] = "Habilitar un personaje de un jugador",
+    ["command_disablechar"] = "Deshabilitar un personaje de un jugador",
+    ["command_charslot"] = "Numero de slot del personaje",
+    ["command_identifier"] = "Identificador del jugador",
+    ["command_slots"] = "Numero de slots",
+    ["slotsadd"] = "Has establecido %s slots para %s",
+    ["slotsrem"] = "Has eliminado slots para %s",
+    ["charenabled"] = "Has habilitado el personaje #%s de %s",
+    ["chardisabled"] = "Has deshabilitado el personaje #%s de %s",
+    ["charnotfound"] = "El personaje #%s de %s no existe",
+}

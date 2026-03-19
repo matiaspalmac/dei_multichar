@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dei Multichar</title>
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-theme="dark" style="background:transparent!important">
+
+    <div id="multichar-container">
+        <div class="overlay"></div>
+
+        <div class="multichar-layout">
+            <!-- Left: Character Slots -->
+            <div class="slots-panel">
+                <div class="slots-title">Personajes</div>
+                <div id="slots-list"></div>
+            </div>
+
+            <!-- Right: Info / Form -->
+            <div class="right-panel">
+                <!-- Character Info Panel -->
+                <div class="info-panel" id="info-panel">
+                    <!-- Empty state -->
+                    <div class="info-empty" id="info-empty">
+                        <div class="info-empty-icon">&#128100;</div>
+                        <div class="info-empty-text">Selecciona un personaje</div>
+                    </div>
+
+                    <!-- Character details -->
+                    <div class="info-content" id="info-content">
+                        <div class="panel-title" id="info-name"></div>
+                        <div class="panel-subtitle" id="info-subtitle"></div>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Trabajo</span>
+                                <span class="info-value" id="info-job"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Efectivo</span>
+                                <span class="info-value cash" id="info-cash"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Fecha de Nacimiento</span>
+                                <span class="info-value" id="info-dob"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Genero</span>
+                                <span class="info-value" id="info-gender"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Nacionalidad</span>
+                                <span class="info-value" id="info-nationality"></span>
+                            </div>
+                            <div class="info-item" id="info-lastplayed-group">
+                                <span class="info-label">Ultima Conexion</span>
+                                <span class="info-value" id="info-lastplayed"></span>
+                            </div>
+                        </div>
+
+                        <div class="info-actions">
+                            <button class="btn btn-play" id="btn-play">Jugar</button>
+                            <button class="btn btn-delete" id="btn-delete">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Creation Form -->
+                <div class="form-panel" id="form-panel">
+                    <div class="form-title">Crear Personaje</div>
+                    <div class="form-subtitle">Completa los datos de tu nuevo personaje</div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-input" id="form-firstname" placeholder="Nombre" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Apellido</label>
+                            <input type="text" class="form-input" id="form-lastname" placeholder="Apellido" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-input" id="form-dob">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Genero</label>
+                            <select class="form-input" id="form-gender">
+                                <option value="male">Masculino</option>
+                                <option value="female">Femenino</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Nacionalidad</label>
+                            <input type="text" class="form-input" id="form-nationality" placeholder="Nacionalidad (opcional)" maxlength="50">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn-create" id="btn-form-create">Crear</button>
+                        <button class="btn btn-cancel" id="btn-form-cancel">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dei-watermark">DEI</div>
+    </div>
+
+    <!-- Delete Confirmation Dialog -->
+    <div class="confirm-overlay" id="confirm-overlay">
+        <div class="confirm-box">
+            <div class="confirm-title">Eliminar Personaje</div>
+            <div class="confirm-text" id="confirm-text"></div>
+            <div class="confirm-actions">
+                <button class="btn btn-confirm-cancel" id="btn-confirm-cancel">Cancelar</button>
+                <button class="btn btn-confirm-delete" id="btn-confirm-delete">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
